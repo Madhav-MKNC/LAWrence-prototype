@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UC-02 TESTING</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <h1 align="center">UC-02 TESTING</h1>
+
+    <div class="container">
+        <div class="section">
+            <label class="heading">Legal Situation</label>
+            <textarea id="legalSituation" placeholder="Describe the legal situation here..."></textarea>
+
+            <label class="heading">Legal Questions</label>
+            <!-- <button onclick="addTextBox()" class="btn btn-add">+</button> -->
+            <div id="legalQuestionsDiv">
+                <input type='text' class='legalQuestion'></input>
+                <button onclick="addTextBox()" class="btn btn-add">+</button>
+            </div>
+        </div>
+
+        <div class="section">
+            <label class="heading">Summary</label>
+            <button id="summarizeBtn" class="btn">Summarize</button>
+            <div id="summaryResult" class="result-box"></div>
+        </div>
+
+        <div class="section">
+            <label class="heading">Articles</label>
+            <button id="getArticlesBtn" class="btn">Get Articles</button>
+            <div id="dropdownContainer" class="result-box"></div>
+        </div>
+          
+        <div class="section">
+            <label class="heading">Get Paragraph(s)</label>
+            <form id="getParagraphForm">
+                <input type="text" class="getParagraphInput" id="bookName" name="bookName" placeholder="Book Name"
+                    required>
+                <input type="number" class="getParagraphInput" id="articleNum" name="articleNum"
+                    placeholder="Article Number" required>
+                <input type="text" class="getParagraphInput" id="articleNumMinor" name="articleNumMinor"
+                    placeholder="Article Number Minor">
+                <input type="number" class="getParagraphInput" id="paragraphNum" name="paragraphNum"
+                    placeholder="Paragraph Number">
+                <button type="submit" class="btn" id="getParagraphBtn">Get Paragraph(s)</button>
+            </form>
+            <pre><div id="paragraphResult" class="result-box"></div></pre>
+
+
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
