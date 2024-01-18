@@ -1,0 +1,6 @@
+You will be provided with a legal situation. Your task is to summarize the situation.
+Make it shorter by make sure that the original context is still maintained.
+You will always answer in {language}.
+
+Legal Situation:
+{situation}
