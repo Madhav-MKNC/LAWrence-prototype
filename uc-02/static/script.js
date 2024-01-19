@@ -35,7 +35,7 @@ document.getElementById('summarizeBtn').addEventListener('click', function () {
         body: JSON.stringify(
             {
                 "legal_situation": legalSituation,
-                "language": "German",
+                "language": "English",
                 "user_id": 123456
             }
         )
@@ -83,7 +83,7 @@ document.getElementById('getArticlesBtn').addEventListener('click', function () 
     var userRequest = {
         "user_id": 123456, // Property names enclosed in double quotes
         "request_id": 1234349, // Property names enclosed in double quotes
-        "language": "German", // Property names enclosed in double quotes
+        "language": "English", // Property names enclosed in double quotes
         "legal_situation": legalSituation, // Property names enclosed in double quotes
         "legal_questions": legalQuestions // Property names enclosed in double quotes
     };
